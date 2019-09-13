@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatButtonModule, MatSidenavModule } from '@angular/material'
-// import { DragDropModule } from '@angular/cdk/drag-drop';
-// import { FileSaverModule } from 'ngx-filesaver';
+import { MatButtonModule, MatSidenavModule } from '@angular/material'
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +17,7 @@ import { ModifyDeleteComponent } from './modify-delete/modify-delete.component';
 import { LeftpanelComponent } from './leftpanel/leftpanel.component';
 import { PanSpaceComponent } from './pan-space/pan-space.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SubmenuComponent } from './submenu/submenu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { plsService } from './plsService';
@@ -28,14 +28,13 @@ import { plsService } from './plsService';
 
 @NgModule({
   imports: [
-    AppRoutingModule,
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    // MatButtonModule,
-    // MatSidenavModule,
+    MatButtonModule,
+    MatSidenavModule,
     BrowserAnimationsModule,
-    // DragDropModule,
-    // FileSaverModule,
+    DragDropModule,
     HttpClientModule
   ],
   declarations: [
@@ -47,6 +46,7 @@ import { plsService } from './plsService';
     LeftpanelComponent,
     PanSpaceComponent,
     ToolbarComponent,
+    PageNotFoundComponent,
     SubmenuComponent
   ],
   providers: [plsService],
