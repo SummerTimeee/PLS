@@ -1,0 +1,22 @@
+<div class="container">
+
+    <h1> {{pageTitle}} </h1>
+  
+  
+    <h5> {{ date }} </h5>
+    <div class="landingPage">
+      <div class="openExisting">
+        <i class="fas fa-folder-open"></i>
+        <a [routerLink]="['/modifyDelete']">{{ openExisting }}</a>
+      </div>
+  
+      <div class="createNew">
+        <i class="fas fa-plus-circle"></i>
+        <a [routerLink]="['/productionLineSchematic']">{{ createNew }}</a>
+      </div>
+  
+      <div class="publish">
+        <i class="fas fa-cloud-upload-alt"></i>{{ publish }}
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+#submenu>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#submenu {
+    display: grid;
+    grid-template-rows: 3fr 2fr 1fr 1fr;
+    text-align: center;
+    padding: 10px;
+    border-style: ridge;
+    box-shadow: 5px 5px 8px #888888;
+    height: 35rem;
+    width: 10.5rem;
+}
+
+.two-third {
+    border: double 4px #969696;
+    border-radius: 22px;
+    height: 7.5rem;
+    width: 9rem;
+    margin-top: 16px;
+    background-color: #f1f1f1;
+} 
+.one-third {
+    border: double 4px #969696;
+    border-radius: 22px;
+    height: 6rem;
+    width: 9rem;
+    background-color: #f1f1f1;
+    margin-top: -29px;
+}
+
+.one-ninth {
+    border: double 4px #969696;
+    border-radius: 22px;
+    height: 4rem;
+    width: 9rem;
+    margin-top: -50px;
+    background-color: #f1f1f1;
+}
+
+.one-sixth {
+    border: double 4px #969696;
+    border-radius: 22px;
+    height: 6rem;
+    width: 7rem;
+    margin-top: -34px;
+    background-color: #f1f1f1;
+}
+
+.recommend-pan {
+    border: dashed rgb(5, 91, 202) 1px;
+}
+p {
+    font-size: 0.7rem;
+    font-weight: bold;
+}

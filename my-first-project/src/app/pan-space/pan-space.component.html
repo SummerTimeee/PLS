@@ -1,0 +1,36 @@
+<div class="pan-section" >
+    <div *ngFor="let ingredient of saveAllPans; let i = index">
+        <div id={{ingredient.ingredient_uuid}} class="pans" [ngStyle]="{
+            'transform': ingredient.position, 
+            'height': getIngredientHeight(ingredient),
+            'width': getIngredientWidth(ingredient),
+            'background-image': ingredient.image,
+            'background-size': '50px',
+            'background-position': '50% 50%',
+            'background-repeat': 'no-repeat'
+            }" (click)="miniMap()" cdkDragBoundary=".pan-section" (cdkDragReleased)="position(ingredient, $event)" cdkDrag>
+            <span (click)="onClose(i)" class="close">&times;</span>
+            <div class="ingredient">{{ ingredient.ingredient }}</div>
+            <div class="servings">{{ ingredient.servings }}</div>
+            <div class="pans-size"> {{ ingredient.pans_size }}</div>
+            <!-- <div class="center">{{ ingredient.servings_size }}</div> -->
+        </div>
+    </div>
+
+</div>
+
+<div class="mini-pan-section" hidden="true">
+
+    <div *ngFor="let ingredient of saveAllPans; let i = index">
+        <div id={{ingredient.ingredient_uuid}} class="mini-pans" [ngStyle]="{
+                'transform': ingredient.position, 
+                'width': miniIngredientWidth(ingredient),
+                'height': miniIngredientHeight(ingredient),
+                'background-image': ingredient.image,
+                'background-size': '10px',
+                'background-position': '50% 50%',
+                'background-repeat': 'no-repeat'
+                }" cdkDragBoundary=".slider" (cdkDragReleased)="position(ingredient, $event)" cdkDrag>
+        </div>
+    </div>
+</div>

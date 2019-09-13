@@ -1,0 +1,137 @@
+:host {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  * {
+    font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: rgba(0, 0, 0, .58);
+    margin-bottom: 0px;
+  }
+  
+  #category-container {
+    overflow-y: scroll;
+    height: 100%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  .leftPanel {
+    background-color: #ffffff;
+    box-shadow: 5px 5px 8px #888888;
+  }
+  
+  li {
+    list-style-type: none;
+    padding-left: 4rem;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  span {
+    cursor: pointer;
+    padding: 5px 15px 5px 20px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .54);
+  }
+  
+  h2 {
+    font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  #search {
+    font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 17px;
+    border-radius: 2rem;
+  }
+  .bg-light {
+    background-color: #ffffff!important;
+  }
+  .categories {
+    color: rgba(0, 0, 0, .5);
+    font-size: 13px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  app-submenu {
+    transition: width 3s;
+    width: 0;
+    opacity: 2;
+  }
+  .hide-nav {
+    width: 0rem;
+    opacity: 0;
+  }
+  .show-nav {
+    width: 10rem;
+    opacity: 6;
+  }
+  
+  
+  @media screen and (min-width:1500px) and (max-width: 2000px) {
+    #category-container {
+      overflow-y: scroll;
+      height: 45rem;
+    }
+  }
+  
+  @media screen and (max-width:800px) {
+    #category-container {
+      overflow-y: scroll;
+      height: 30rem;
+    }
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+    .leftPanel {
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 7.5rem;
+      left: 0.5rem;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 0.5rem;
+    }
+    li {
+      list-style-type: none;
+      padding-left: 4rem;
+      cursor: pointer;
+      font-size: 11px;
+    }
+    span {
+      cursor: pointer;
+      padding: 5px 15px 5px 20px;
+      margin-bottom: 4px;
+      font-size: 11px;
+      color: rgba(0, 0, 0, .54);
+    }
+    h2 {
+      font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      text-align: center;
+      font-size: 15px;
+    }
+    #search {
+      font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 13px;
+    }
+    .categories {
+      color: rgba(0, 0, 0, .5);
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+  

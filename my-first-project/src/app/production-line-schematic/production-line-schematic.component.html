@@ -1,0 +1,15 @@
+<app-toolbar
+(onSave)="onSave()"></app-toolbar>
+
+
+<app-leftpanel (search)="search($event)" 
+                (toggleItem)="toggleItem($event)" 
+                (getSelectedIngredient)="getSelectedIngredient($event)"
+                (toggleCategory)="toggleCategory($event)"
+                [ingredients]="leftPanelIngredients" 
+                [categories]="categories"
+                (toggleAllClosed)="toggleAllClosed()"></app-leftpanel>
+
+<app-pan-space 
+    [saveAllPans]="saveAllPans">
+</app-pan-space>

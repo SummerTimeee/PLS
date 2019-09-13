@@ -1,0 +1,30 @@
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Date Modified</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of nameDates ;let i = index">
+                <td>{{ info.name }}</td>
+                <td>{{ info.dateCreated }}</td>
+                <td>{{ info.lastModified}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary">
+                        <a [routerLink]="['/productionLineSchematic']">Open</a></button>
+                </td>
+                <td>
+                    <button id="remove" type="button" class="btn" (click)="onDelete(i)">
+                        <i class="far fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

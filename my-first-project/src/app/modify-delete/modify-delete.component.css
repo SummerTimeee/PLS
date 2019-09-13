@@ -1,0 +1,38 @@
+.container {
+    margin-top: 12rem;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .fa-trash-alt {
+    font-size: 1rem;
+    color: red;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  @media screen and (max-width: 780px) {
+    .container {
+      margin: 0rem;
+      padding: 0rem;
+    }
+    td, th {
+      text-align: left;
+      padding: 0rem 0rem 1rem 0rem;
+      font-size: 1rem;
+    }
+    .fa-trash-alt {
+      font-size: 0.7rem;
+      color: red;
+    }
+    .btn {
+      font-size: 0.5rem;
+    }
+  }

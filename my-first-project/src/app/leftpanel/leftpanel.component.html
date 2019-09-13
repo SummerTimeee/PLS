@@ -1,0 +1,53 @@
+<div class="leftPanel">
+
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input (keyup)="search.emit($event.target.value)" id="search" class="form-control mr-sm-2" type="search"
+                placeholder="Search.." aria-label="Search">
+        </form>
+    </nav>
+
+    <div id="category-container">
+
+        <div *ngFor="let category of categories">
+            <div (click)="toggleCategory.emit(category)" id="bt" class="categories">
+                <hr>
+                {{category.label}}
+            </div>
+            <div *ngIf="category.hide">
+
+                <div *ngFor="let item of categoryIngredients[category.category_uuid]">
+                    <span (click)="getClickedIngredient(item)">
+                        {{ item.ingredient }}
+                    </span>
+                    <div *ngIf="item.hide">
+                        <li>
+                            <strong>Pan Size</strong> {{ item.pans_size }}
+                        </li>
+                        <li>
+                            <strong> # of Backup Pans Needed</strong> {{ item.backup_pans_needed }}
+                        </li>
+                        <li>
+                            <strong> Pans Allocated</strong> {{ item.pans_allocated }}
+                        </li>
+                        <li>
+                            <strong>Portion Tool </strong> {{ item.servings_size }}
+                        </li>
+                        <li>
+                            <strong># of Half Salads per Pan</strong> {{ item.servings }}
+                        </li>
+                        <li>
+                            <strong> Outstanding</strong> {{ item.outstanding }}
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<app-submenu [ingredient]="lastClickedItem"
+     (getSelectedIngredient)="plotSelectedIngredient($event)"
+    [className]="hideSubMenu ? 'hide-nav' : 'show-nav'"></app-submenu>

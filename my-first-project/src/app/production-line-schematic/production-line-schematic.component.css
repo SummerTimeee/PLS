@@ -1,0 +1,19 @@
+app-toolbar {
+    grid-area: toolbar;
+  }
+  app-leftpanel {
+    grid-area: leftPanel;
+  }
+  app-pan-space {
+    grid-area: panSpace;
+  }
+  
+  :host {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 4.5rem auto;
+    grid-template-areas: 
+    'toolbar .'
+    'leftPanel panSpace';
+  }
